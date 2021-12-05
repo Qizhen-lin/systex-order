@@ -53,6 +53,7 @@ header {
 		img {
 			width: 100px;
 			vertical-align: middle;
+			margin-right: 11px;
 		}
 
 		span {

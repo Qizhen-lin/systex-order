@@ -10,6 +10,10 @@ ul {
 	list-style: none;
 }
 
+a {
+	text-decoration: none;
+}
+
 .content-main {
 	margin-top: 63px;
 	display: flex;
@@ -26,25 +30,6 @@ ul {
 		background-size: cover;
 		background-color: rgba(0, 0, 0, 0.1);
 		background-blend-mode: multiply;
-
-		nav {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			background: #ff5809;
-
-			div {
-				color: #f3f3f3d8;
-				cursor: pointer;
-				text-align: center;
-				font-size: 18px;
-				padding: 4px;
-				&:hover {
-					background-color: #ff8b7c;
-					border-radius: 3px;
-				}
-			}
-		}
 	}
 
 	table,

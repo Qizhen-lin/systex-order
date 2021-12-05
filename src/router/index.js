@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/views/Home.vue";
 import Login_page from '@/views/Login_page.vue';
-import Order from "@/views/Order.vue";
+import Announcement from '@/views/announcement/Announcement.vue';
+import Order from "@/views/order/Order.vue";
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,11 @@ const routes = [
     name: "Login_page",
     component: Login_page,
     children: [
+      {
+        path: "/announcement",
+        name: "Announcement",
+        component: Announcement,
+      },
       {
         path: "/order",
         name: "Order",

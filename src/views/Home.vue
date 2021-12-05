@@ -79,21 +79,13 @@ export default {
         alert("請輸入帳號密碼");
         return;
       }
-      location.href = "/login_page";
+      location.href = "/announcement";
     }
   }
 }
 </script>
 
-<style>
-
-</style>
-
 <style lang="scss" scoped>
-a {
-	text-decoration: none;
-}
-
 .logo_style_block {
 	margin: 0 auto;
 	width: 100%;
