@@ -55,6 +55,8 @@ aside {
 
     li {
       a {
+        display: inline-block;
+        width: 100%;
         padding: 15px;
         cursor: pointer;
         color: #292929;
