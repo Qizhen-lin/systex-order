@@ -1,5 +1,5 @@
 <template>
-  <article class="container mt-2">
+  <article class="container">
     <div class="logo_style_block">
       <div class="img_block">
         <a href="index.html">
@@ -64,7 +64,6 @@
   </article>
 </template>
 
-
 <script>
 export default {
   name: "Home",
@@ -77,27 +76,17 @@ export default {
   methods: {
     checkBtn() {
       if (!this.login_account || !this.login_password) { // 當他的值不存在時做的事
-    alert("請輸入帳號密碼");
-    return;
-  }
-  location.href = "../login_page.html";  
+        alert("請輸入帳號密碼");
+        return;
+      }
+      location.href = "/login_page";
     }
-  },
+  }
 }
 </script>
 
 <style>
-body {
-	font-family: Arial, MsJhengHeiBold, 微軟正黑體, Microsoft JhengHei, Roboto,
-		PingFangTC, sans-serif;
-	width: 100%;
-	background-image: url(./assets/food_bg_6.jpeg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	background-color: rgba(0, 0, 0, 0.1);
-	background-blend-mode: multiply;
-}
+
 </style>
 
 <style lang="scss" scoped>
@@ -176,5 +165,4 @@ footer {
 	margin-top: 60px;
 	color: #c3cbcd;
 }
-
 </style>
