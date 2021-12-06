@@ -21,7 +21,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/announcement">
+          <router-link to="/personal-information">
             <i class="fas fa-user"></i>
             <span>個人資料修改</span>
           </router-link>

@@ -6,8 +6,8 @@
       <div @click="changeCurrentlyClick('drinks')">飲料</div>
       <div @click="changeCurrentlyClick('uploadMenu')">上傳菜單</div>
       <div>報表下載</div>
-      <div>金主設定</div>
-      <div>餘額查詢與充值</div>
+      <div @click="changeCurrentlyClick('funderSetting')">金主設定</div>
+      <div @click="changeCurrentlyClick('balancerecharge')">餘額查詢與充值</div>
     </nav>
 
     <!-- 午餐 -->
@@ -18,6 +18,10 @@
     <Drinks v-else-if="currentlyClick === 'drinks'" />
     <!-- 上傳菜單 -->
     <UploadMenu v-else-if="currentlyClick === 'uploadMenu'" />
+    <!-- 金主設定 -->
+    <FunderSetting v-else-if="currentlyClick === 'funderSetting'"/>
+    <!-- 餘額查詢與充值 -->
+    <Balancerecharge v-else-if="currentlyClick === 'balancerecharge'" />
   </div>
 </template>
 
@@ -26,6 +30,8 @@ import Lunch from "@/components/order/Lunch.vue";
 import Dessert from '@/components/order/Dessert.vue';
 import Drinks from '@/components/order/Drinks.vue';
 import UploadMenu from "@/components/order/UploadMenu.vue";
+import FunderSetting from '@/components/order/FunderSetting.vue';
+import Balancerecharge from "@/components/order/Balancerecharge.vue";
 
 export default {
   name: "Order",
@@ -38,7 +44,9 @@ export default {
     Lunch,
     Dessert,
     Drinks,
-    UploadMenu
+    UploadMenu,
+    FunderSetting,
+    Balancerecharge
   },
   methods: {
     changeCurrentlyClick(type) {

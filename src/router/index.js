@@ -4,6 +4,7 @@ import Home from "@/views/Home.vue";
 import Login_page from '@/views/Login_page.vue';
 import Announcement from '@/views/announcement/Announcement.vue';
 import Order from "@/views/order/Order.vue";
+import PersonalInformation from "@/views/personalInformation/PersonalInformation.vue";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
         path: "/order",
         name: "Order",
         component: Order,
+      },
+      {
+        path: "/personal-information",
+        name: "PersonalInformation",
+        component: PersonalInformation,
       }
     ]
   }
