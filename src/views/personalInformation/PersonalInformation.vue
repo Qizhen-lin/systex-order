@@ -1,97 +1,94 @@
 <template>
   <section>
-        <h2> 個人資料修改</h2>
-        <div>
-          <table>
-            <tr>
-              <td>姓名</td>
-              <td>
-                <input type="text" v-model="name">
-              </td>
-            </tr>
-            <tr>
-              <td>帳號</td>
-              <td>
-                <input type="text" v-model="adaccount">
-              </td>
-            </tr>
-            <tr>
-              <td>工號</td>
-              <td>
-                <input type="text" v-model="numberid">
-              </td>
-            </tr>
-            <tr>
-              <td>打卡 ID</td>
-              <td>
-                <input type="text" v-model="clock_id">
-              </td>
-            </tr>
-            <tr>
-              <td>部門</td>
-              <td>
-                <input type="text" v-model="department">
-              </td>
-            </tr>
-            <tr>
-              <td>職稱</td>
-              <td>
-                <input type="text" v-model="title">
-              </td>
-            </tr>
-            <tr>
-              <td>到職日</td>
-              <td>
-                <input type="text" v-model="startday">
-              </td>
-            </tr>
-            <tr>
-              <td>地區</td>
-              <td>
-                <input type="text" v-model="company">
-              </td>
-            </tr>
-            <tr>
-              <td>代理人一</td>
-              <td>
-                <input type="text" v-model="agentA">
-              </td>
-            </tr>
-            <tr>
-              <td>代理人二</td>
-              <td>
-                <input type="text" v-model="agentB">
-              </td>
-            </tr>
+    <h2> 個人資料修改</h2>
+    <div>
+      <table>
+        <tr>
+          <td>姓名</td>
+          <td>
+            <input type="text" v-model="name">
+          </td>
+        </tr>
+        <tr>
+          <td>帳號</td>
+          <td>
+            <input type="text" v-model="adaccount">
+          </td>
+        </tr>
+        <tr>
+          <td>工號</td>
+          <td>
+            <input type="text" v-model="numberid">
+          </td>
+        </tr>
+        <tr>
+          <td>打卡 ID</td>
+          <td>
+            <input type="text" v-model="clock_id">
+          </td>
+        </tr>
+        <tr>
+          <td>部門</td>
+          <td>
+            <input type="text" v-model="department">
+          </td>
+        </tr>
+        <tr>
+          <td>職稱</td>
+          <td>
+            <input type="text" v-model="title">
+          </td>
+        </tr>
+        <tr>
+          <td>到職日</td>
+          <td>
+            <input type="text" v-model="startday">
+          </td>
+        </tr>
+        <tr>
+          <td>地區</td>
+          <td>
+            <input type="text" v-model="company">
+          </td>
+        </tr>
+        <tr>
+          <td>代理人一</td>
+          <td>
+            <input type="text" v-model="agentA">
+          </td>
+        </tr>
+        <tr>
+          <td>代理人二</td>
+          <td>
+            <input type="text" v-model="agentB">
+          </td>
+        </tr>
 
-            <tr>
-              <td>Email</td>
-              <td>
-                <input type="text" v-model="mail">
-              </td>
-            </tr>
-            <tr>
-              <td>新密碼</td>
-              <td>
-                <input type="text" v-model="Password">
-              </td>
-            </tr>
-            <tr>
-              <td>確認新密碼</td>
-              <td>
-                <input type="text" v-model="Password">
-              </td>
-            </tr>
-          </table>
-        </div>
-      </section>
+        <tr>
+          <td>Email</td>
+          <td>
+            <input type="text" v-model="mail">
+          </td>
+        </tr>
+        <tr>
+          <td>新密碼</td>
+          <td>
+            <input type="text" v-model="Password">
+          </td>
+        </tr>
+        <tr>
+          <td>確認新密碼</td>
+          <td>
+            <input type="text" v-model="Password">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
 </template>
 
 <script>
 import axios from 'axios'
- // eslint-disable-next-line no-undef
-//  Vue.prototype.axios = axios
-//  axios.defaults.baseURL = '/api'
 export default {
   name: "PersonalInformation",
   data() {
@@ -123,68 +120,37 @@ export default {
   },
   created() {
     const self = this;
-  axios.get('http://ethan5420.synology.me:52000/UserInfo/EmpolyeeInfo?UID=2100722') 
-   .then(response => {
-      console.log("response", response);
-        self.id = "response.id";
-        self.name = "response.name";
-        self.clock_id = "response.clock_id";
-        self.numberid = "response.numberid";
-        self.startday = "response.startday";
-        self.title = "response.title";
-        self.department = "response.department";
-        self.adaccount = "response.adaccount";
-        self.LeaveAll = "response.LeaveAll";
-        self.state = "response.state";
-        self.RightIds = "response.RightIds";
-        self.Balance = "response.Balance";
-        self.Leaveex = "response.Leaveex";
-        self.lastday = "response.lastday";
-        self.Password = "response.Password";
-        self.agentA = "response.agentA";
-        self.agentB = "response.agentB";
-        self.mail = "response.mail";
-        self.company = "response.company";
-        self.userid = "response.userid";
-        self.memberof = "response.memberof";
-        self.domain = "response.domain";
-        self.dn = "response.dn";
-      }
-   ).catch(error=>{
-    console.log(error);
-  })
-    
-    // fetch('/ethan5420/EmployeeManage/EmpolyeeInfo?UID=2100722', { method: 'GET'})
-    //   .then(function(response) {
-    //     console.log("response", response);
-    //     // 找 response 內容，加在雙引號裡
-    //     self.id = "";
-    //     self.name = "";
-    //     self.clock_id = "";
-    //     self.numberid = "";
-    //     self.startday = "";
-    //     self.title = "";
-    //     self.department = "";
-    //     self.adaccount = "";
-    //     self.LeaveAll = "";
-    //     self.state = "";
-    //     self.RightIds = "";
-    //     self.Balance = "";
-    //     self.Leaveex = "";
-    //     self.lastday = "";
-    //     self.Password = "";
-    //     self.agentA = "";
-    //     self.agentB = "";
-    //     self.mail = "";
-    //     self.company = "";
-    //     self.userid = "";
-    //     self.memberof = "";
-    //     self.domain = "";
-    //     self.dn = "";
-    //   }).catch(function(err) {
-    //     console.console.log("err", err);
-    //   });
-  },
+    axios.get('http://ethan5420.synology.me:3030/api/Users/2100722')
+      .then(response => {
+        console.log("response", response);
+          self.id = response.data.id;
+          self.name = response.data.name;
+          self.clock_id = response.data.clock_id;
+          self.numberid = response.data.numberid;
+          self.startday = response.data.startday;
+          self.title = response.data.title;
+          self.department = response.data.department;
+          self.adaccount = response.data.adaccount;
+          self.LeaveAll = response.data.LeaveAll;
+          self.state = response.data.state;
+          self.RightIds = response.data.RightIds;
+          self.Balance = response.data.Balance;
+          self.Leaveex = response.data.Leaveex;
+          self.lastday = response.data.lastday;
+          self.Password = response.data.Password;
+          self.agentA = response.data.agentA;
+          self.agentB = response.data.agentB;
+          self.mail = response.data.mail;
+          self.company = response.data.company;
+          self.userid = response.data.userid;
+          self.memberof = response.data.memberof;
+          self.domain = response.data.domain;
+          self.dn = response.data.dn;
+        }
+      ).catch(error => {
+        console.log(error);
+      });
+  }
 }
 </script>
 
