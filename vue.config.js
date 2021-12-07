@@ -12,7 +12,7 @@ module.exports = {
     config.entry.app = ["babel-polyfill", "./src/main.js"];
   },
   devServer: {
-    host: "ethan5420.synology.me",
+    host: "local.ethan5420.synology.me",
     port: 52000
   }
 }

@@ -95,11 +95,11 @@ export default {
       id: 0,
       name: null,
       clock_id: null,
-      numberid: "SYSTEX-040",
-      startday: "2021/11/29",
+      numberid: null,
+      startday: null,
       title: null,
-      department: "Information Department-A",
-      adaccount: "2100722",
+      department: null,
+      adaccount: null,
       LeaveAll: null,
       state: null,
       RightIds: null,
@@ -109,7 +109,7 @@ export default {
       Password: null,
       agentA: null,
       agentB: null,
-      mail: "2100722@systex.com",
+      mail: null,
       company: null,
       userid: null,
       memberof: null,
@@ -122,9 +122,30 @@ export default {
     fetch('http://ethan5420.synology.me:52000/EmployeeManage/EmpolyeeInfo?UID=2100722', { method: 'GET' })
       .then(function(response) {
         console.log("response", response);
-        // 找 response 內容，有名字的地方取代掉
-        self.name = "林琪臻";
-        self.clock_id = "240";
+        // 找 response 內容，加在雙引號裡
+        self.id = "";
+        self.name = "";
+        self.clock_id = "";
+        self.numberid = "";
+        self.startday = "";
+        self.title = "";
+        self.department = "";
+        self.adaccount = "";
+        self.LeaveAll = "";
+        self.state = "";
+        self.RightIds = "";
+        self.Balance = "";
+        self.Leaveex = "";
+        self.lastday = "";
+        self.Password = "";
+        self.agentA = "";
+        self.agentB = "";
+        self.mail = "";
+        self.company = "";
+        self.userid = "";
+        self.memberof = "";
+        self.domain = "";
+        self.dn = "";
       }).catch(function(err) {
         console.console.log("err", err);
       });
