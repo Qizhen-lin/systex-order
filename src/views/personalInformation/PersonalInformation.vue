@@ -88,6 +88,10 @@
 </template>
 
 <script>
+import axios from 'axios'
+ // eslint-disable-next-line no-undef
+//  Vue.prototype.axios = axios
+//  axios.defaults.baseURL = '/api'
 export default {
   name: "PersonalInformation",
   data() {
@@ -119,36 +123,67 @@ export default {
   },
   created() {
     const self = this;
-    fetch('http://ethan5420.synology.me:52000/EmployeeManage/EmpolyeeInfo?UID=2100722', { method: 'GET' })
-      .then(function(response) {
-        console.log("response", response);
-        // 找 response 內容，加在雙引號裡
-        self.id = "";
-        self.name = "";
-        self.clock_id = "";
-        self.numberid = "";
-        self.startday = "";
-        self.title = "";
-        self.department = "";
-        self.adaccount = "";
-        self.LeaveAll = "";
-        self.state = "";
-        self.RightIds = "";
-        self.Balance = "";
-        self.Leaveex = "";
-        self.lastday = "";
-        self.Password = "";
-        self.agentA = "";
-        self.agentB = "";
-        self.mail = "";
-        self.company = "";
-        self.userid = "";
-        self.memberof = "";
-        self.domain = "";
-        self.dn = "";
-      }).catch(function(err) {
-        console.console.log("err", err);
-      });
+  axios.get('http://ethan5420.synology.me:52000/UserInfo/EmpolyeeInfo?UID=2100722') 
+   .then(response => {
+      console.log("response", response);
+        self.id = "response.id";
+        self.name = "response.name";
+        self.clock_id = "response.clock_id";
+        self.numberid = "response.numberid";
+        self.startday = "response.startday";
+        self.title = "response.title";
+        self.department = "response.department";
+        self.adaccount = "response.adaccount";
+        self.LeaveAll = "response.LeaveAll";
+        self.state = "response.state";
+        self.RightIds = "response.RightIds";
+        self.Balance = "response.Balance";
+        self.Leaveex = "response.Leaveex";
+        self.lastday = "response.lastday";
+        self.Password = "response.Password";
+        self.agentA = "response.agentA";
+        self.agentB = "response.agentB";
+        self.mail = "response.mail";
+        self.company = "response.company";
+        self.userid = "response.userid";
+        self.memberof = "response.memberof";
+        self.domain = "response.domain";
+        self.dn = "response.dn";
+      }
+   ).catch(error=>{
+    console.log(error);
+  })
+    
+    // fetch('/ethan5420/EmployeeManage/EmpolyeeInfo?UID=2100722', { method: 'GET'})
+    //   .then(function(response) {
+    //     console.log("response", response);
+    //     // 找 response 內容，加在雙引號裡
+    //     self.id = "";
+    //     self.name = "";
+    //     self.clock_id = "";
+    //     self.numberid = "";
+    //     self.startday = "";
+    //     self.title = "";
+    //     self.department = "";
+    //     self.adaccount = "";
+    //     self.LeaveAll = "";
+    //     self.state = "";
+    //     self.RightIds = "";
+    //     self.Balance = "";
+    //     self.Leaveex = "";
+    //     self.lastday = "";
+    //     self.Password = "";
+    //     self.agentA = "";
+    //     self.agentB = "";
+    //     self.mail = "";
+    //     self.company = "";
+    //     self.userid = "";
+    //     self.memberof = "";
+    //     self.domain = "";
+    //     self.dn = "";
+    //   }).catch(function(err) {
+    //     console.console.log("err", err);
+    //   });
   },
 }
 </script>

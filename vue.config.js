@@ -12,7 +12,15 @@ module.exports = {
     config.entry.app = ["babel-polyfill", "./src/main.js"];
   },
   devServer: {
-    host: "local.ethan5420.synology.me",
-    port: 52000
+    host: "http://ethan5420.synology.me:52000/UserInfo/EmpolyeeInfo?UID=2100722",
+    port: 52000,
+    // proxy: {
+    //   "/ethan5420": {
+    //     target: "http://ethan5420.synology.me:52000",
+    //     changeOrigin: true
+    //   }
+    // }
   }
+
 }
+

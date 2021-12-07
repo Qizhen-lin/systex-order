@@ -27,6 +27,7 @@ export default {
     // Announcement
   }
 }
+
 </script>
 
 <style lang="scss" scoped>
