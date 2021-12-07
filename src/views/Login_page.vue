@@ -3,7 +3,7 @@
     <Header />
     <div class="content-main">
       <Aside />
-      <article>
+      <article :style="`background-image: url(${nowBgImg})`">
         <!-- 其他分頁 -->
         <router-view />
       </article>
@@ -16,18 +16,40 @@
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 import Aside from '@/components/Aside.vue';
-// import Announcement from "./announcement/Announcement.vue";
 
 export default {
   name: "Login_page",
+  data() {
+    return {
+      nowBgImg: require('@/assets/dessert.webp')
+    }
+  },
   components: {
     Header,
     Aside,
-    Footer,
-    // Announcement
+    Footer
+  },
+  watch: { // vue 的監聽方法
+    $route(to) {
+      // if 判斷式優化寫法(僅限 1 個判斷)
+      const bgType = {
+        Announcement: require('@/assets/dessert.webp'),
+        Order: require('@/assets/asparagus-2169305_960_720.webp'),
+        PersonalInformation: require('@/assets/dinner_bg.jpeg')
+      };
+
+      this.nowBgImg = bgType[to.name];
+
+      // if (to.name === "Announcement") {
+      //   this.nowBgImg = require('@/assets/dessert.webp');
+      // } else if (to.name === "Order") {
+      //   this.nowBgImg = require('@/assets/asparagus-2169305_960_720.webp');
+      // } else if (to.name === "PersonalInformation") {
+      //   this.nowBgImg = require('@/assets/dinner_bg.jpeg');
+      // }
+    }
   }
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -35,5 +57,4 @@ export default {
 	margin-top: 63px;
 	display: flex;
 }
-
 </style>
