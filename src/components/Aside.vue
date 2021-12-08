@@ -27,7 +27,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/announcement">
+          <router-link to="/setting_managment">
             <i class="fas fa-cog"></i>
             <span>設定管理</span>
           </router-link>

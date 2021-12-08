@@ -37,6 +37,7 @@ export default {
         Order: require('@/assets/asparagus-2169305_960_720.webp'),
         PersonalInformation: require('@/assets/dinner_bg.jpeg'),
         PersonalOrderRecord: require ('@/assets/pizza-2776188_960_720.jpeg'),
+        SettingManagement: require ('@/assets/dessert.jpeg')
       };
 
       this.nowBgImg = bgType[to.name];

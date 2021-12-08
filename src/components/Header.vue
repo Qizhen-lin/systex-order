@@ -2,10 +2,12 @@
   <header>
     <div>
       <h1>
-        <img
-          src="@/assets/infinitus.jpeg"
-          alt=""
-        >
+				<router-link to="/" title="SYSTEX">
+					<img
+						src="@/assets/infinitus.jpeg"
+						alt=""
+					>
+        </router-link>
         <span>點餐趣</span>
       </h1>
     </div>

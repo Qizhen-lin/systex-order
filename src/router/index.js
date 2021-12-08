@@ -6,6 +6,7 @@ import Announcement from '@/views/announcement/Announcement.vue';
 import Order from "@/views/order/Order.vue";
 import PersonalInformation from "@/views/personalInformation/PersonalInformation.vue";
 import PersonalOrderRecord from '@/views/personalOrderRecord/PersonalOrderRecord.vue';
+import SettingManagement from '@/views/settingManagement/SettingManagement.vue'
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
         path: "/personal_order_record",
         name: "PersonalOrderRecord",
         component: PersonalOrderRecord,
+      },
+      {
+        path: "/setting_managment",
+        name: "SettingManagement",
+        component: SettingManagement,
       }
     ]
   }

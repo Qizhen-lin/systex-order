@@ -11,6 +11,7 @@
             <span>點餐趣</span>
           </h1>
         </a>
+
       </div>
     </div>
     <div class="order_title mb-3">
@@ -156,5 +157,48 @@ footer {
 	text-align: center;
 	margin-top: 60px;
 	color: #c3cbcd;
+}
+
+@media(max-width:428px) {
+  .logo_style_block {
+    margin-bottom: 16px;
+    .img_block {
+      h1 {
+        img {
+          width: 180px;
+        }
+      span {
+        font-size: 28px;
+      }
+    }
+   }
+  }
+
+  .container {
+      .order_title {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+
+    .input_style {
+      .form {
+        width: 90%;
+        input {
+          padding: 10px;
+          &:first-child {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        margin: 16px 0 0 0 ;
+      }
+
+
+    }
+  }
+
 }
 </style>
