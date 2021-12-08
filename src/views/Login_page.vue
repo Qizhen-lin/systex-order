@@ -35,7 +35,8 @@ export default {
       const bgType = {
         Announcement: require('@/assets/dessert.webp'),
         Order: require('@/assets/asparagus-2169305_960_720.webp'),
-        PersonalInformation: require('@/assets/dinner_bg.jpeg')
+        PersonalInformation: require('@/assets/dinner_bg.jpeg'),
+        PersonalOrderRecord: require ('@/assets/pizza-2776188_960_720.jpeg'),
       };
 
       this.nowBgImg = bgType[to.name];

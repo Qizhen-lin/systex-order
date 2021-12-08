@@ -1,105 +1,66 @@
-<!-- 金主設定 -->
 <template>
-	<section class="sponsor">
-			<div class="sponsor_set">金主設定</div>
-
-			<div class="sponsor_blcok">
-
-				<table>
-					<tbody>
-						<tr class="sponsor_menu">
-							<td class="sponsor_name">選擇金主姓名
-							</td>
-							<td>
-								<select>
-									<option selected=""></option>
-									<option>鄭竣謙</option>
-									<option>陳建廷</option>
-									<option>賴聲翔</option>
-									<option>邱念佳</option>
-									<option>陳顥文</option>
-									<option>劉凱帆</option>
-									<option>吳禹澔</option>
-									<option>李家萱</option>
-									<option>黃宸緯</option>
-									<option>潘思融</option>
-									<option>陳宜欣</option>
-									<option>郭立欣</option>
-									<option>劉祥生</option>
-									<option>王珮慈</option>
-									<option>黃國財</option>
-									<option>鄒佩鈞</option>
-									<option>林靜</option>
-									<option>林蓉蔚</option>
-									<option>林建宏</option>
-									<option>劉勝登</option>
-									<option>劉芳妤</option>
-									<option>高沛辰</option>
-									<option>尤思涵</option>
-									<option>吳思葦</option>
-									<option>歐陽沁縈</option>
-									<option>鄭羽涵</option>
-									<option>劉家羽</option>
-									<option>張長青</option>
-									<option>呂冠元 </option>
-									<option>陳永村</option>
-									<option>許佳雯</option>
-									<option>曾祥維</option>
-									<option>蔡佩珊</option>
-									<option>黃信豪</option>
-									<option>林琪臻</option>
-								</select>
-							</td>
-
-
-						</tr>
-						<tr class="sponsored_meals">
-							<td class="sponsored_item">選擇贊助餐點</td>
-							<td>
-								<button class="btn btn-outline-danger">午餐</button>
-								<button class="btn btn-outline-danger">點心</button>
-								<button class="btn btn-outline-danger">飲料</button>
-							</td>
-
-						</tr>
-						<tr class="sponsored_submit">
-							<td colspan="2">
-								<button class="btn btn-info btn-lg">送出</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<hr>
-				<section class="patron_details">
-					<h2>今日金主名單</h2>
-					<div class="patron_details_grid">
-						<div class="patron_name">金主姓名</div>
-						<div class="patron_item">金援項目</div>
-						<div class="patron_set_user">此次設定人
-
-						</div>
-						<div class="patron_del">刪除</div>
-						<div class="patron_name_content">林琪臻</div>
-						<div class="patron_item_content">午餐</div>
-						<div class="patron_set_user_content">林琪臻</div>
-						<div>
-							<button class="btn btn-primary">刪除</button>
-						</div>
-					</div>
-				</section>
-			</div>
-	</section>
+      
+      <div class="table_border">
+        <h3>個人點餐記錄</h3>
+        <table>
+          <tr>
+            <td class="table_title">姓名</td>
+            <td>
+              林琪臻
+            </td>
+          </tr>
+          <tr>
+            <td class="table_title">餐點</td>
+            <td>
+              排骨便當
+            </td>
+          </tr>
+          <tr>
+            <td class="table_title">需求</td>
+            <td>
+              不辣
+            </td>
+          </tr>
+          <tr>
+            <td class="table_title">總金額</td>
+            <td>
+              70元
+            </td>
+          </tr>
+          <tr>
+            <td class="table_title">付款方式</td>
+            <td>
+              <select>
+                <option>請選擇付款方式</option>
+                <option>現金</option>
+                <option>一卡通</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="table_title">實付金額</td>
+            <td>
+              <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td class="table_title">付款狀態</td>
+            <td>
+              已付款：70元
+            </td>
+          </tr>
+        </table>
+      </div>
 </template>
 
 <script>
 export default {
-  name: "FunderSetting"
+  name:"PersonalOrderRecord"
 }
 </script>
 
 <style lang="scss" scoped>
-
-.content-main {
+  .content-main {
 	margin-top: 63px;
 	display: flex;
 
@@ -109,7 +70,7 @@ export default {
 		padding-bottom: 90px;
 		margin-left: 250px;
 		width: 100%;
-		background-image: url(/img/dinner_bg.jpeg);
+		background-image: url(/img/macarons-1850216_960_720.webp);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
@@ -136,76 +97,42 @@ export default {
 		}
 	}
 
-	.order_block,
-	.dessert_block,
-	.drinks_block,
-	.upload_menu,
-	.sponsor,
-	.balance_recharge {
+	h3 {
+		text-align: center;
+		color: #eb112b;
+		font-size: 28px;
+    margin: 20px auto;
+	}
+
+	.table_border {
 		width: 800px;
 		margin: 20px auto 0;
-		border: 1px solid #ddd;
 		border-radius: 8px;
-		background: #f3f3f3;
+		background: #fff;
 		overflow: hidden;
 
-		.name,
-		.dessert_name,
-		.drinks_name,
-		.upload_menu_name,
-		.sponsor_set,
-		.balance_recharge_search {
-			text-align: center;
-			font-size: 18px;
-			font-weight: bold;
-			color: rgba(255, 255, 255, 0.815);
-			background: #ff8b7c;
-			padding: 8px;
-			margin-bottom: 10px;
-		}
+		table {
+			font-size: 20px;
+			width: 550px;
+			margin: 10px auto;
+			border-style: hidden;
 
-		.sponsor_set,
-		.balance_recharge_search {
-			margin-bottom: 30px;
-		}
-
-		.dessert_name {
-			background: #4e91ff;
-			color: #fff;
-		}
-
-		.drinks_name {
-			background: #00afb8;
-			color: #fff;
-		}
-
-		.order_status,
-		.dessert_order_status,
-		.drinks_order_status {
-			text-align: center;
-			margin: 20px auto;
-			button {
-				border-radius: 8px;
-				font-size: 18px;
-				background: #e6f9fa;
-				border: #f04e2f;
-				color: #666;
-				font-weight: bold;
-				margin-left: 8px;
-
-				&:hover {
-					background: #e94629;
-					color: #fff;
+			tr {
+				.table_title {
+					color: #666;
+          font-weight: bold;
+					text-align: justify;
+					width: 120px;
+					padding: 10px 0;
 				}
-			}
-		}
-
-		.dessert_order_status {
-			button {
-				background: #ffeedf;
-
-				&:hover {
-					background: #f1550c;
+				td {
+					color: #292929;
+					border: 2px solid #eee;
+					padding-left: 30px;
+				}
+				input {
+					border-radius: 3px;
+					border: 1px solid #7979;
 				}
 			}
 		}
@@ -402,14 +329,10 @@ export default {
 			}
 
 			table {
-				margin: 0 auto;
 				tbody {
-					border-style: hidden;
-					padding: 20px;
 					.sponsor_menu {
 						margin-bottom: 30px;
 						.sponsor_name {
-							border-style: hidden;
 							font-size: 24px;
 							font-weight: bold;
 							color: #666;
@@ -418,27 +341,20 @@ export default {
 					}
 
 					select {
-						border: 1px #ddd solid;
-						border-radius: 3px;
-						padding: 10px 100px;
-						margin: 8px;
+						padding: 8px 90px;
 					}
 
 					.sponsored_meals {
-					
 						.sponsored_item {
-							border-style: hidden;
 							font-size: 24px;
 							font-weight: bold;
-							color: #666666;
+							color: #666;
 						}
 
 						td {
-							border-style: hidden;
 							button {
-								width: 80px;
 								border-color: #ff8b7c;
-								margin: 8px;
+								margin-left: 10px;
 
 								&:hover {
 									background: #ff8b7c;
@@ -448,17 +364,12 @@ export default {
 					}
 
 					.sponsored_submit {
-						border-style: hidden;
 						margin-left: 100px;
 
 						td {
-							border-style: hidden;
-							text-align: center;
-							padding: 8px 0;
 							button {
-					
 								color: #292929;
-								width: 120px;
+								width: 100px;
 
 								&:hover {
 									color: #fff;
@@ -466,7 +377,6 @@ export default {
 								}
 							}
 						}
-						
 					}
 				}
 			}
@@ -717,33 +627,6 @@ export default {
 		}
 	}
 }
-	
-				
-
-		
-
-			
-		
-
-
-
-
-	
-
-
-
-
-
-
-
-
-			
-
-
-
-
-
-
 
 
 </style>

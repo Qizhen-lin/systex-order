@@ -15,7 +15,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/announcement">
+          <router-link to="/personal_order_record">
             <i class="fas fa-search"></i>
             <span>個人點餐記錄查詢</span>
           </router-link>

@@ -1,13 +1,24 @@
 <template>
   <div>
     <nav>
-      <div @click="changeCurrentlyClick('lunch')">午餐</div>
-      <div @click="changeCurrentlyClick('dessert')">點心</div>
-      <div @click="changeCurrentlyClick('drinks')">飲料</div>
-      <div @click="changeCurrentlyClick('uploadMenu')">上傳菜單</div>
-      <div>報表下載</div>
-      <div @click="changeCurrentlyClick('funderSetting')">金主設定</div>
-      <div @click="changeCurrentlyClick('balancerecharge')">餘額查詢與充值</div>
+      <div @click="changeCurrentlyClick('lunch')">
+        <span><i class="fas fa-hamburger"></i></span>
+        午餐</div>
+      <div @click="changeCurrentlyClick('dessert')">
+        <span><i class="fas fa-cheese"></i></span>
+        點心</div>
+      <div @click="changeCurrentlyClick('drinks')">
+        <span><i class="fas fa-coffee"></i></span>
+        飲料</div>
+      <div @click="changeCurrentlyClick('uploadMenu')">
+        <span><i class="fas fa-upload"></i></span>
+        上傳菜單</div>
+      <div>
+       <span><i class="fas fa-file-excel"></i></span> 報表下載</div>
+      <div @click="changeCurrentlyClick('funderSetting')">
+       <span><i class="fas fa-credit-card"></i></span> 金主設定</div>
+      <div @click="changeCurrentlyClick('balancerecharge')">
+       <span><i class="fas fa-search-dollar"></i></span> 餘額查詢與充值</div>
     </nav>
 
     <!-- 午餐 -->
