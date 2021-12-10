@@ -3,12 +3,10 @@
     <div>
       <h1>
 				<router-link to="/" title="SYSTEX">
-					<img
-						src="@/assets/infinitus.jpeg"
-						alt=""
-					>
+					<span>Tea Time </span>
+					<span>點餐趣</span>
         </router-link>
-        <span>點餐趣</span>
+        
       </h1>
     </div>
     <div class="personal">
@@ -62,6 +60,11 @@ header {
 			font-size: 24px;
 			color: #ff5809;
 			font-weight: bold;
+
+			&:first-child {
+				font-size: 36px;
+				color: #666;
+			}
 		}
 
 		img,

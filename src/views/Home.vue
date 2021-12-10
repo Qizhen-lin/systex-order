@@ -4,10 +4,7 @@
       <div class="img_block">
         <a href="index.html">
           <h1>
-            <img
-              src="@/assets/infinitus-removebg-preview.png"
-              alt=""
-            >
+            <span>Tea Time </span>
             <span>點餐趣</span>
           </h1>
         </a>
@@ -25,9 +22,9 @@
             type="text"
             class="form-control"
             id="login_account"
-            placeholder="Login Account"
+            placeholder="帳號：請輸入任意文字"
             onfocus="this.placeholder=''"
-            onblur="this.placeholder='Login Account'"
+            onblur="this.placeholder='請輸入任意帳號'"
           >
         </div>
         <div class="mb-3">
@@ -36,9 +33,9 @@
             type="password"
             class="form-control"
             id="exampleInputPassword1"
-            placeholder="Password"
+            placeholder="密碼：請輸入任意文字"
             onfocus="this.placeholder=''"
-            onblur="this.placeholder='Password'"
+            onblur="this.placeholder='密碼：請輸入任意文字'"
           >
         </div>
         <div class="mb-3 form-check">
@@ -107,7 +104,15 @@ export default {
 				font-size: 32px;
 				color: #ff5809;
 				padding-bottom: 1.5%;
+
+        &:first-child {
+          font-size: 36px;
+          color: #666;
+          font-weight: bold;
+          margin-right: 10px;
+        }
 			}
+      
 		}
 	}
 }
