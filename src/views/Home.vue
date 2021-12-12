@@ -2,13 +2,12 @@
   <article class="container">
     <div class="logo_style_block">
       <div class="img_block">
-        <a href="index.html">
+        <router-link to="/systex-order/" title="SYSTEX">
           <h1>
             <span>Tea Time </span>
             <span>點餐趣</span>
           </h1>
-        </a>
-
+        </router-link>
       </div>
     </div>
     <div class="order_title mb-3">
@@ -22,7 +21,7 @@
             type="text"
             class="form-control"
             id="login_account"
-            placeholder="帳號：請輸入任意文字"
+            placeholder="帳號:請輸入任意文字"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='請輸入任意帳號'"
           >
@@ -33,9 +32,9 @@
             type="password"
             class="form-control"
             id="exampleInputPassword1"
-            placeholder="密碼：請輸入任意文字"
+            placeholder="密碼:請輸入任意文字"
             onfocus="this.placeholder=''"
-            onblur="this.placeholder='密碼：請輸入任意文字'"
+            onblur="this.placeholder='密碼:請輸入任意文字'"
           >
         </div>
         <div class="mb-3 form-check">

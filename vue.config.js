@@ -11,17 +11,13 @@ module.exports = {
       .set("scss", resolve("src/scss"));
     config.entry.app = ["babel-polyfill", "./src/main.js"];
   },
-  publicPath: '/systex-order/',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/systex-order/'
+    : '/',
   devServer: {
     host: "local.ethan5420.synology.me",
     // host: "http://ethan5420.synology.me:3030/api/Users/2100722",
     port: 52000,
-    // proxy: {
-    //   "/api": {
-    //     target: "http://ethan5420.synology.me:3030/api",
-    //     changeOrigin: true
-    //   }
-    // }
   }
 }
 

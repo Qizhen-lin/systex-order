@@ -2,7 +2,7 @@
   <header>
     <div>
       <h1>
-				<router-link to="/" title="SYSTEX">
+				<router-link to="/systex-order/" title="SYSTEX">
 					<span>Tea Time </span>
 					<span>點餐趣</span>
         </router-link>
