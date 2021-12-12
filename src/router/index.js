@@ -12,37 +12,37 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/systex-order",
     name: "Home",
     component: Home
   },
   {
-    path: "/login_page",
+    path: "/systex-order/login_page",
     name: "Login_page",
     component: Login_page,
     children: [
       {
-        path: "/announcement",
+        path: "/systex-order/announcement",
         name: "Announcement",
         component: Announcement,
       },
       {
-        path: "/order",
+        path: "/systex-order/order",
         name: "Order",
         component: Order,
       },
       {
-        path: "/personal-information",
+        path: "/systex-order/personal-information",
         name: "PersonalInformation",
         component: PersonalInformation,
       },
       {
-        path: "/personal_order_record",
+        path: "/systex-order/personal_order_record",
         name: "PersonalOrderRecord",
         component: PersonalOrderRecord,
       },
       {
-        path: "/setting_managment",
+        path: "/systex-order/setting_managment",
         name: "SettingManagement",
         component: SettingManagement,
       }

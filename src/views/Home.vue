@@ -77,7 +77,7 @@ export default {
         alert("請輸入帳號密碼");
         return;
       }
-      location.href = "/announcement";
+      location.href = "/systex-order/announcement";
     }
   }
 }

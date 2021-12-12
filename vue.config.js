@@ -11,6 +11,7 @@ module.exports = {
       .set("scss", resolve("src/scss"));
     config.entry.app = ["babel-polyfill", "./src/main.js"];
   },
+  publicPath: '/systex-order/',
   devServer: {
     host: "local.ethan5420.synology.me",
     // host: "http://ethan5420.synology.me:3030/api/Users/2100722",
