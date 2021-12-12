@@ -2,7 +2,7 @@
   <article class="container">
     <div class="logo_style_block">
       <div class="img_block">
-        <router-link to="/systex-order/" title="SYSTEX">
+        <router-link to="/" title="SYSTEX">
           <h1>
             <span>Tea Time </span>
             <span>點餐趣</span>
@@ -76,7 +76,7 @@ export default {
         alert("請輸入帳號密碼");
         return;
       }
-      location.href = "/systex-order/announcement";
+      location.href = "./#/systex-order/announcement";
     }
   }
 }

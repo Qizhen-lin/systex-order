@@ -2,7 +2,7 @@
   <header>
     <div>
       <h1>
-				<router-link to="/systex-order/" title="SYSTEX">
+				<router-link to="/" title="SYSTEX">
 					<span>Tea Time </span>
 					<span>點餐趣</span>
         </router-link>
@@ -38,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 header {
 	width: 100%;
+	height: 63px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

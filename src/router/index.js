@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/systex-order",
+    path: "/",
     name: "Home",
     component: Home
   },
@@ -51,7 +51,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  // mode: "history",
   base: process.env.BASE_URL,
   routes,
   scrollBehavior() {

@@ -3,31 +3,31 @@
     <nav>
       <ul>
         <li>
-          <router-link to="/announcement">
+          <router-link to="/systex-order/announcement">
             <i class="fas fa-home"></i>
             <span>公告</span>
           </router-link>
         </li>
         <li>
-          <router-link to="/order">
+          <router-link to="/systex-order/order">
             <i class="fas fa-utensils"></i>
             <span>點餐</span>
           </router-link>
         </li>
         <li>
-          <router-link to="/personal_order_record">
+          <router-link to="/systex-order/personal_order_record">
             <i class="fas fa-search"></i>
             <span>個人點餐記錄查詢</span>
           </router-link>
         </li>
         <li>
-          <router-link to="/personal-information">
+          <router-link to="/systex-order/personal-information">
             <i class="fas fa-user"></i>
             <span>個人資料修改</span>
           </router-link>
         </li>
         <li>
-          <router-link to="/setting_managment">
+          <router-link to="/systex-order/setting_managment">
             <i class="fas fa-cog"></i>
             <span>設定管理</span>
           </router-link>
